@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import Todo from "./Todo";
 import React from "react";
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({ filteredTodos, todos, setTodos }) => {
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        {todos.map((todo) => (
+        {filteredTodos.map((todo) => (
           <Todo
             setTodos={setTodos}
             todos={todos}
@@ -14,7 +14,6 @@ const TodoList = ({ todos, setTodos }) => {
             todo={todo}
           />
         ))}
-        <Todo />
       </ul>
     </div>
   );
